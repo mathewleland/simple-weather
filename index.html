@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <title>Weather</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--Font Awesome (not needed for this app)-->
+    <script src="https://use.fontawesome.com/f9ff2609a9.js"></script>
+
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/roboto.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.min.css">
+
+
+    <!--Page style -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <style>
+      body {
+        text-align: center;
+        font-weight: bold;
+      }
+      #mainWell {
+        min-height: 90%;
+        margin-top: 40px;
+      }
+
+      .well {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      p {
+        font-size: 3em;
+        /*text-align: center;*/
+      }
+      img {
+        max-height: 100px;
+      }
+
+      #newSearch {
+        background: url('https://s3-us-west-1.amazonaws.com/personalprojectfiles/search.svg') no-repeat;
+        background-size: 75px;
+        text-align: right;
+      }
+
+      button {
+        width: 250px;
+      }
+      input {
+        width: 250px;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2vw;
+      }
+
+      #umbrella {
+        background-color: red;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+
+
+    <div class="container container-fluid">
+
+      <div class="card" id="umbrella">
+        <!-- <h1> do i need an umbrella</h1> -->
+      </div>
+
+      <div class="well well-lg" id="mainWell">
+        <div id="weatherText">
+          <h1 id="location"> City Name here</h1>
+
+          <!-- can change weather icon with "addclass" -->
+          <div>
+            <img src="" alt="Weather icon goes here" id="icon"/>
+            <p id="weatherDesc">
+
+            </p>
+          </div>
+
+          <h2 id="temp">0</h2>
+          <div class="togglebutton">
+                <label>
+                  C - F <br  />
+                  <input type="checkbox" checked="true" name="units">
+                </label>
+          </div>
+        </div>
+
+        <br  />
+        <br />
+
+        <!-- <div class="row"> -->
+          <!-- <div class="col-xs-12"> -->
+            <!-- <form> -->
+              <input type="text" placeholder="zip code" id="newSearch"/><br /><!-- form entry to search for new location -->
+            <!-- </form> -->
+          <!-- </div> -->
+
+          <!-- <div class="col-xs-12"> -->
+            <!-- make this search button an input type =submit -->
+            <input type="submit" id="searchButton" class="submit btn btn-raised btn-primary" />
+            <!-- <button class="btn btn-raised btn-primary submit" id="searchButton"> <i class="fa fa-search"></i> Search New Location</button> -->
+            <br  />
+            <button class="btn btn-raised btn-info" id="currentButton"> <i class="fa fa-globe"></i> Get Current location </button>
+          <!-- </div>
+        </div> -->
+
+
+
+
+      </div>
+
+      <footer class="well">
+        <small>
+          Made as a project for <a href="http://freecodecamp.com/mathewleland">Free Code Camp.</a>  Icons were used with permission, designed by Freepik and distributed by <a href="http://www.flaticon.com/">Flaticon</a>.
+        </small>
+        <small>
+          See a full list of projects by <a href="github.com/mathewleland">Mathew Leland</a>
+        </small>
+
+      </footer>
+
+
+    </div>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- JQuery  -->
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+
+    <!-- Page specific JS and Material Design CDN links -->
+    <script src="js/weather.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
+    <script> $(function() { $.material.init(); }); </script>
+
+  </body>
+
+
+
+</html>
