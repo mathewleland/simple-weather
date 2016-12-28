@@ -111,7 +111,7 @@ function update(weather) {
 
 //construct the url that I want to send a request with
 function updateByZip(zip) {
-  var url = "http://api.openweathermap.org/data/2.5/weather?zip=" + zip +
+  var url = "https://api.openweathermap.org/data/2.5/weather?zip=" + zip +
           "&APPID=" + APIKey;
   sendRequest(url);
 }
@@ -152,7 +152,7 @@ function kelvinsToC(kelvins) {
 
 // use IP address to give a user's zip code
 function getCurrentLocation() {
-  $.getJSON('http://ipinfo.io', function(data) {
+  $.getJSON('https://ipinfo.io', function(data) {
     updateByZip(data.postal);
   });
 }
